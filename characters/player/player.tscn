@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0v20sql45lee"]
+[gd_scene load_steps=6 format=3 uid="uid://d0v20sql45lee"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_7hmab"]
 [ext_resource type="PackedScene" uid="uid://cd0l6a250pb6c" path="res://characters/character_mover.tscn" id="2_w4p8t"]
+[ext_resource type="PackedScene" uid="uid://dvp3ndjsf36pj" path="res://characters/health_manager.tscn" id="3_00w52"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g1urb"]
 
@@ -25,3 +26,5 @@ skeleton = NodePath("../CollisionShape3D")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="CharacterMover" parent="." instance=ExtResource("2_w4p8t")]
+
+[node name="HealthManager" parent="." instance=ExtResource("3_00w52")]
