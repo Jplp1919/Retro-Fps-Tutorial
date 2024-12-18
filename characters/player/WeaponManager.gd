@@ -8,7 +8,7 @@ var cur_weapon = null
 func _ready():
 	disable_all_weapons()
 	for _i in range(weapons.size()):
-		weapons_unlocked.append(false)
+		weapons_unlocked.append(true)
 
 func disable_all_weapons():
 	for weapon in weapons:
@@ -43,3 +43,7 @@ func switch_to_weapon_slot(slot_ind: int)->bool:
 		cur_weapon.show()
 	
 	return true
+
+func test_attack_animation():
+	for weapon in weapons:
+		weapon.get_node("Graphics/AnimationPlayer").play("attack")
